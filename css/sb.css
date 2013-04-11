@@ -1,0 +1,93 @@
+/*-----------------------------------------------------------------------------
+					Shady Business main CSS 11 April 2013
+-----------------------------------------------------------------------------*/
+
+/*--- Tags ------------------------------------------------------------------*/
+img
+{
+	display: block;
+
+	width: 75%;
+
+	margin-left : auto;
+	margin-right: auto;
+}
+
+body
+{
+	background-image: url("../img/bkg.jpg");
+}
+
+/*--- Classes ---------------------------------------------------------------*/
+.post
+{
+	background-color:DarkOliveGreen;
+
+	margin: 0em;
+	margin-top   :1em;
+	margin-bottom:1em;
+
+	padding:0.5em;
+
+	border-radius : 1em;
+}
+
+/*--- Specific items --------------------------------------------------------*/
+#content
+{
+	/* Background */
+	background-color:red;
+
+	/* Size */
+	width  : 50%;
+	height : 100%;
+
+	/* Positioning */
+	position : relative;
+	top      : 0px;
+	bottom   : 0px;
+	
+	/* Margins et Paddings */
+	margin-left   : auto;
+	margin-right  : auto;
+	margin-top    : 0px;
+	margin-bottom : 0px;
+
+	padding : 0.5em;
+}
+
+#header
+{
+	background-color:blue;
+	
+	width: 100%;
+
+	position:relative;
+	top:0px;
+
+	margin-top   :0px;
+	margin-bottom:0px;
+	
+	padding-top    : 0.5em;
+	padding-bottom : 0.5em;
+	padding-left   : 0.5em;
+	padding-right  : 0.5em; 
+}
+
+#footer
+{
+	background-color:green;
+	
+	width:100%;
+
+	position:fixed;
+	bottom:0px;
+	
+	margin-top:0px;
+	margin-bottom:0px;
+
+	padding-top    : 0.5em;
+	padding-bottom : 0.5em;
+	padding-left   : 0.5em;
+	padding-right  : 0.5em;
+}
