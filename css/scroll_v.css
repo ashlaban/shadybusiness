@@ -1,0 +1,38 @@
+/* NOTE: width and height for div#wn also specified in head of demo */
+div#wn { 
+    position:relative; /* scroll area div must be positioned */
+    width:250px; height:170px; /* width and height required. adjust to suit  */
+    overflow:hidden; /* required! */
+	}
+
+/* style scrollLinks to suit your taste and layout. Styles below center them under the scroll area.
+scrollbar.html shows how to position them to the right of the scroll area */
+div#scrollLinks {
+    position:relative;
+    /* include following if you don't want scroll controls hidden when insufficient content for scrolling */
+    /* visibility:visible !important; */ 
+    width:250px; height:12px;
+    margin-top:6px;
+    }
+div#scrollLinks .up {
+    background-image:url('../images/tri-up.gif');
+    background-repeat: no-repeat;
+    width:12px; height:12px; /* specify width and height of your image */
+    position:absolute; 
+    left:110px;
+    }
+div#scrollLinks .down {
+    background-image:url('../images/tri-dn.gif');
+    background-repeat: no-repeat;
+    width:12px; height:12px; /* specify width and height of your image */
+    position:absolute;
+    right:110px;
+    }
+	
+/* safari, chrome, opera have very prominent outline by default 
+   opera shows outline movement with scrolling and won't allow none
+   set to suit your page design
+*/
+div#wn:focus {
+    outline:1px dotted #eee;
+    }

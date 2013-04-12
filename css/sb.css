@@ -15,7 +15,7 @@ img
 
 body
 {
-	background-image: url("../img/bkg.jpg");
+	background-image: url("../img/bkg.png");
 }
 
 /*--- Classes ---------------------------------------------------------------*/
@@ -36,7 +36,9 @@ body
 #content
 {
 	/* Background */
-	background-color:red;
+	background-color:#e00f16;
+
+	overflow: hidden;
 
 	/* Size */
 	width  : 50%;
@@ -68,10 +70,13 @@ body
 	margin-top   :0px;
 	margin-bottom:0px;
 	
+	/* Obsolete with new css menu */
+	/*
 	padding-top    : 0.5em;
 	padding-bottom : 0.5em;
 	padding-left   : 0.5em;
-	padding-right  : 0.5em; 
+	padding-right  : 0.5em;
+	*/
 }
 
 #footer
