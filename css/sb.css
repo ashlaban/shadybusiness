@@ -3,6 +3,11 @@
 -----------------------------------------------------------------------------*/
 
 /*--- Tags ------------------------------------------------------------------*/
+*
+{
+	font-family: Geneva, Tahoma, Verdana, sans-serif;
+}
+
 img
 {
 	display: block;
@@ -15,15 +20,22 @@ img
 
 body
 {
-	background-image: url("../img/bkg.png");
+	background-color: #FEE0C6;
+	/*background-image: url("../img/bkg.png");*/
+
+	background-repeat: repeat-x;
+	background-position: left center;
 }
 
 /*--- Classes ---------------------------------------------------------------*/
-.post
+.post_content
 {
-	background-color:DarkOliveGreen;
+	background-color: #EEEEEE;
 
-	margin: 0em;
+	display: block;
+	position: relative;
+
+	margin: 1em;
 	margin-top   :1em;
 	margin-bottom:1em;
 
@@ -32,22 +44,49 @@ body
 	border-radius : 1em;
 }
 
+.post_content > h1
+{
+	position: relative;
+	padding-left: 0.5em;
+	font-variant: small-caps;
+}
+.post_content > h1:after
+{
+	position: absolute;
+	left: 0; top: 0; bottom: 0;
+	background-color: red;
+	content: "";
+	width: 5px;
+	border-radius: 2px;
+}
+/*
+	ashlaban: 18 April 2013;
+	TODO: add hbar before author and time stamp.
+*/
+
 /*--- Specific items --------------------------------------------------------*/
 #content
 {
-	/* Background */
-	background-color:#e00f16;
-
 	overflow: hidden;
+}
+#content_scroll
+{
+	/* Background */
+	background-color:#CFCFA6;
+	border-left: 5px solid black;
+	border-right: 5px solid black;
+
+	overflow: scroll;
 
 	/* Size */
 	width  : 50%;
-	height : 100%;
 
 	/* Positioning */
-	position : relative;
-	top      : 0px;
-	bottom   : 0px;
+	position : absolute;
+	left     : 0px;
+	right    : 0px;
+	top      : 55px;
+	bottom   : 30px;
 	
 	/* Margins et Paddings */
 	margin-left   : auto;
@@ -55,44 +94,38 @@ body
 	margin-top    : 0px;
 	margin-bottom : 0px;
 
-	padding : 0.5em;
+	padding-left  : 0.5em;
+	padding-right : 0.5em;
+	padding-top   : 0.5em;
+	padding-bottom: 0.5em;
 }
 
 #header
 {
-	background-color:blue;
-	
-	width: 100%;
+	background-image:url(http://www.zingerbugimages.com/backgrounds/black_diagonal_stripes_seamless_background_pattern.jpg);
+	border-bottom: 5px solid #444444;
+	overflow: hidden;
 
-	position:relative;
-	top:0px;
+	width : 100%;
+	height: 50px;
 
-	margin-top   :0px;
-	margin-bottom:0px;
-	
-	/* Obsolete with new css menu */
-	/*
-	padding-top    : 0.5em;
-	padding-bottom : 0.5em;
-	padding-left   : 0.5em;
-	padding-right  : 0.5em;
-	*/
+	position:absolute;
+
+	margin : 0px;
+	padding: 0px;
 }
 
 #footer
 {
-	background-color:green;
-	
-	width:100%;
+	background-image:url(http://www.zingerbugimages.com/backgrounds/black_diagonal_stripes_seamless_background_pattern.jpg);
+	border-top:    5px solid #444444;
 
-	position:fixed;
+	width:100%;
+	height: 30px;
+
+	position:absolute;
 	bottom:0px;
 	
-	margin-top:0px;
-	margin-bottom:0px;
-
-	padding-top    : 0.5em;
-	padding-bottom : 0.5em;
-	padding-left   : 0.5em;
-	padding-right  : 0.5em;
+	margin : 0px;
+	padding: 0px;
 }

@@ -1,0 +1,68 @@
+<span class="post_content">
+
+<h1>Week 15 Summary</h1>
+
+<p>Sick one day and kind of unproductive the first few days of the week. Recovered some during Friday. Set up for nice continuation.</p>
+
+<p>Next week I will have to transition into writing on the article if we want that finished. Focus of <code>mpLib</code> will be performance analysis and formatting it. I also hope to complete the VHDL kernel. I will also check what is needed to implement my version on the FPGA.</p>
+
+<h2>mpLib</h2>
+
+<ol>
+<li>Prepared performance analysis by preparing lots of different compiled executables and deriving a theoretical formula.</li>
+<li>Created a configuration file to hold typedefs and defines.</li>
+</ol>
+
+
+<h2>VHDL</h2>
+
+<ol>
+<li>Made sure gtkWave works as intented on my machine.</li>
+<li>Hard-coded a 5 level adder tree into my kernel. Simulated in gtkWave.</li>
+</ol>
+
+
+</span>
+
+<span class="post_content">
+
+<h1>Worklog 12 April 2013</h1>
+
+<h2>mpLib</h2>
+
+<ol>
+<li>Set up profiling execs</li>
+<li>Complexity analysis: 2T  + I<em>( K</em>N<em>T + K</em>N + N )</li>
+<li>Hoisted configuration of <code>MP_</code> constants to separate file mpConfig.h.</li>
+</ol>
+
+
+<h3>TODO:</h3>
+
+<ul>
+<li>Document mp, Match, Reconstruct, Utility</li>
+<li>Const correctness</li>
+<li>Analyse profiling</li>
+<li>Look into static analysers? Xcode?</li>
+<li>Make complexity pic?</li>
+</ul>
+
+
+<h2>VHDL</h2>
+
+<ol>
+<li>Recompiled gtkWave, verified simulation working</li>
+<li>Hard coded Adder tree in kernel_s</li>
+</ol>
+
+
+<h3>TODO:</h3>
+
+<ul>
+<li>General sized kernels</li>
+<li>Interface with c-code somehow: <a href="http://bit.ly/16w6aKC">FPGA Programming w/ VHDL and C</a></li>
+<li>Find profiling tools?</li>
+</ul>
+
+
+</span>

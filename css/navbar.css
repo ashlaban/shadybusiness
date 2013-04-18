@@ -1,0 +1,56 @@
+#navbar *
+{
+  margin: 0;
+  padding: 0;
+}
+
+#navbar
+{
+  margin-top    : 0;
+  margin-bottom : 0;
+  margin-left   : auto;
+  margin-right  : auto;
+
+  position: relative;
+  height: 100%;
+
+  text-align: center;
+  list-style: none;
+}
+
+#navbar > ul
+{
+}
+
+#navbar > ul > li
+{
+  display: inline-block;
+}
+
+#navbar a
+{
+
+  font-size: 22;
+
+  display: inline-block;
+  background-color: black;
+  text-align: center;
+  padding: 10% 0;
+  width: 140px;
+  height: 100%;
+  text-decoration: none;
+
+  color: #D2B48C ;
+
+  border-bottom: 5px solid #444444;
+}
+
+#navbar a:hover
+{
+  background-color: gray;
+}
+
+#navbar a:visited
+{
+
+}
