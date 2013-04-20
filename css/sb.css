@@ -102,6 +102,7 @@ body
 
 #header
 {
+	background-color: #333333;
 	background-image:url(http://www.zingerbugimages.com/backgrounds/black_diagonal_stripes_seamless_background_pattern.jpg);
 	border-bottom: 5px solid #444444;
 	overflow: hidden;
@@ -117,6 +118,7 @@ body
 
 #footer
 {
+	background-color: #333333;
 	background-image:url(http://www.zingerbugimages.com/backgrounds/black_diagonal_stripes_seamless_background_pattern.jpg);
 	border-top:    5px solid #444444;
 
