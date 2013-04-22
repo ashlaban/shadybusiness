@@ -1,68 +1,96 @@
-<span class="post_content">
+<div class="post_content">
 
-<h1>Week 15 Summary</h1>
+  <h1 id="week-16-summary">Week 16 Summary</h1>
 
-<p>Sick one day and kind of unproductive the first few days of the week. Recovered some during Friday. Set up for nice continuation.</p>
+  <h2 id="mplib">mpLib</h2>
 
-<p>Next week I will have to transition into writing on the article if we want that finished. Focus of <code>mpLib</code> will be performance analysis and formatting it. I also hope to complete the VHDL kernel. I will also check what is needed to implement my version on the FPGA.</p>
+  <h2 id="vhdl">VHDL</h2>
 
-<h2>mpLib</h2>
+  <h3 id="todo-for-mplib">TODO for mpLib:</h3>
+  <ul>
+    <li>Document mp, Match, Reconstruct, Utility</li>
+    <li>Const correctness</li>
+    <li>Analyse profiling
+      <ul>
+        <li>
+          <mark>Collect more data points from benchmark</mark>
+        </li>
+        <li>Verify multidimensional theory</li>
+      </ul>
+    </li>
+    <li>Look into static analysers? Xcode?</li>
+    <li>Kernel adaption and reconstruction of impulse polluted and noisy sine?</li>
+    <li>Communication between mpLib and world using stdin/stdout?</li>
+    <li>AXI4 memory mapping for shared memory between FPGA / CPU.</li>
+  </ul>
 
-<ol>
-<li>Prepared performance analysis by preparing lots of different compiled executables and deriving a theoretical formula.</li>
-<li>Created a configuration file to hold typedefs and defines.</li>
-</ol>
+  <h3 id="todo-for-vhdl">TODO for VHDL:</h3>
+  <ul>
+    <li>
+      <mark>General sized kernels</mark>
+    </li>
+    <li><del>Find profiling tools?</del></li>
+    <li>Wrapper for the VHDL unit</li>
+    <li>
+      <mark>Use all parallell or serial for kernel data bus?</mark>
+    </li>
+    <li>
+      <mark>Clocked vs. unclocked components?</mark>
+    </li>
+    <li>Interface with c-code somehow: <a href="http://bit.ly/16w6aKC">FPGA Programming w/ VHDL and C</a></li>
+  </ul>
 
+</div>
+<div class="post_content">
 
-<h2>VHDL</h2>
+  <h1 id="worklog-18-april-2013">Worklog 18 April 2013</h1>
 
-<ol>
-<li>Made sure gtkWave works as intented on my machine.</li>
-<li>Hard-coded a 5 level adder tree into my kernel. Simulated in gtkWave.</li>
-</ol>
+  <h2 id="vhdl-1">VHDL</h2>
+  <ol>
+    <li>Design of VHDL part of mpLib with documentation.
+ Documentation covers parallell or serial communication, clocked vs. unclocked among other things.</li>
+  </ol>
 
+</div>
+<div class="post_content">
 
-</span>
+  <h1 id="worklog-17-april-2013">Worklog 17 April 2013</h1>
 
-<span class="post_content">
+  <h2 id="mplib-1">mpLib</h2>
+  <ol>
+    <li>Benchmarking extended and automised in MATLAB</li>
+    <li>Documented benchmarking runs.</li>
+    <li>Quick look into impulse feature extraction from noisy sine.</li>
+  </ol>
 
-<h1>Worklog 12 April 2013</h1>
+  <h2 id="vhdl-2">VHDL</h2>
+  <ol>
+    <li>Comparator and Kernel linked together.</li>
+    <li>Verified Kernel and Comaprator in gtkWave.</li>
+  </ol>
 
-<h2>mpLib</h2>
+</div>
+<div class="post_content">
 
-<ol>
-<li>Set up profiling execs</li>
-<li>Complexity analysis: 2T  + I<em>( K</em>N<em>T + K</em>N + N )</li>
-<li>Hoisted configuration of <code>MP_</code> constants to separate file mpConfig.h.</li>
-</ol>
+  <h1 id="worklog-16-april-2013">Worklog 16 April 2013</h1>
 
+  <h2 id="vhdl-3">VHDL</h2>
+  <ol>
+    <li>Schematic of part extracted to VHDL</li>
+    <li>Copied Jötes implementation of the adder tree (using heap)</li>
+    <li>Unclocked Kernel implementation completed</li>
+    <li>Unclocked max comparator implementation completed</li>
+  </ol>
 
-<h3>TODO:</h3>
+</div>
+<div class="post_content">
 
-<ul>
-<li>Document mp, Match, Reconstruct, Utility</li>
-<li>Const correctness</li>
-<li>Analyse profiling</li>
-<li>Look into static analysers? Xcode?</li>
-<li>Make complexity pic?</li>
-</ul>
+  <h1 id="worklog-15-april-2013">Worklog 15 April 2013</h1>
 
+  <h2 id="mplib-2">mpLib</h2>
+  <ol>
+    <li>Ran profiling execs</li>
+    <li>Matlab plots</li>
+  </ol>
 
-<h2>VHDL</h2>
-
-<ol>
-<li>Recompiled gtkWave, verified simulation working</li>
-<li>Hard coded Adder tree in kernel_s</li>
-</ol>
-
-
-<h3>TODO:</h3>
-
-<ul>
-<li>General sized kernels</li>
-<li>Interface with c-code somehow: <a href="http://bit.ly/16w6aKC">FPGA Programming w/ VHDL and C</a></li>
-<li>Find profiling tools?</li>
-</ul>
-
-
-</span>
+</div>

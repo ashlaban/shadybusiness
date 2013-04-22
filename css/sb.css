@@ -59,10 +59,22 @@ body
 	width: 5px;
 	border-radius: 2px;
 }
-/*
-	ashlaban: 18 April 2013;
-	TODO: add hbar before author and time stamp.
-*/
+
+.post_content > .post_footer:before
+{
+	/* Insert hbar and shit here kinda */
+}
+
+.post_content > .post_footer > .sig
+{
+	display: block;
+	font-style: italic;
+}
+.post_content > .post_footer > .author { /* Empty for now*/ }
+.post_content > .post_footer > .time
+{
+	float: right;
+}
 
 /*--- Specific items --------------------------------------------------------*/
 #content
