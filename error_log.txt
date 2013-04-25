@@ -95,3 +95,12 @@
 [1366559825] [error] [client 127.0.0.1] GET /favicon.ico: Error 404: Not Found
 [1366559862] [error] [client 127.0.0.1] GET /favicon.ico: Error 404: Not Found
 [1366559932] [error] [client 127.0.0.1] GET /favicon.ico: Error 404: Not Found
+[1366931807] [error] [client 127.0.0.1] GET /favicon.ico: Error 404: Not Found
+[1366931808] [error] [client 127.0.0.1] GET /favicon.ico: Error 404: Not Found
+[1366931810] [error] [client 127.0.0.1] GET /img/week17_processedSignal.png: Error 404: Not Found
+[1366931810] [error] [client 127.0.0.1] GET /img/week17_kernels.png: Error 404: Not Found
+[1366931810] [error] [client 127.0.0.1] GET /favicon.ico: Error 404: Not Found
+[1366931874] [error] [client 127.0.0.1] GET /favicon.ico: Error 404: Not Found
+[1366931930] [error] [client 127.0.0.1] GET /favicon.ico: Error 404: Not Found
+[1366932011] [error] [client 127.0.0.1] GET /favicon.ico: Error 404: Not Found
+[1366932031] [error] [client 127.0.0.1] GET /favicon.ico: Error 404: Not Found
