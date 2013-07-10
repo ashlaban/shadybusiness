@@ -64,7 +64,6 @@ body
 {
 	/* Insert hbar and shit here kinda */
 }
-
 .post_content > .post_footer > .sig
 {
 	display: block;
@@ -98,7 +97,8 @@ body
 	left     : 0px;
 	right    : 0px;
 	top      : 55px;
-	bottom   : 30px;
+	/*bottom   : 30px; Footer removed!*/
+	bottom   : 0px;
 	
 	/* Margins et Paddings */
 	margin-left   : auto;

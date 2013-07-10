@@ -1,41 +1,39 @@
-<html>
+<span class="post_content">
 
-<head>
 	<!-- jQuery -->
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	
 	<!-- Map generation -->
-	<script src="lib/QuadTree.js"></script>
-	<script src="lib/PerlinSimplex.js"></script>
-	<script src="lib/base.js"></script>
-	<script src="map-gen-demo.js"></script>
+	<script src="demo/lib/QuadTree.js"></script>
+	<script src="demo/lib/PerlinSimplex.js"></script>
+	<script src="demo/lib/base.js"></script>
+	<script src="demo/map-gen-demo.js"></script>
 
 	<!-- Pathfinder -->
-	<script src="lib/Pathfinder.js"></script>
-	<script src="lib/Heap.js"></script>
-	<script src="pathfinder-demo.js"></script>
-</head>
+	<script src="demo/lib/Pathfinder.js"></script>
+	<script src="demo/lib/Heap.js"></script>
+	<script src="demo/pathfinder-demo.js"></script>
 
-<body>
+<h1>Map generation and pathfinding</h1>
 
 <p>
 During the start of this summer I took some time to dump in things other than master's thesis work. For one week me and a couple of friends got together and practised attack-programming. The end result; A map generator based on Ken Perlin's simplex noise and a heirachical map manager capable of representing the map at different levels of detail all implemented in javascript! This means it is easy to demo the stuff on a webpage such as this! A special thanks goes to Sean McCullough [todo: link] for his javascript implementation of a simplex noise generator.
 </p>
 
 <!-- Map generation demo -->
-<div id="map-gen">
+<span id="map-gen" style="display:block;text-align:center">
 	<canvas id="canvas-map-gen1"></canvas>
 	<canvas id="canvas-map-gen2"></canvas>
 	<canvas id="canvas-map-gen3"></canvas>
-</div>
+</span>
 
 <p>
 This is the basic idea for the map representation for Endless Chase. I hope to be able to handle large worlds by only using the level of detail needed. For example, unit pathfinding can be solved exactly for small distances and approximated when travelling for longer stretches. This is similar to how we humans solve pathfinding; We don't plan every step to take when going to the store. We first determine key points to pass and then path between these key points. Inspired by this, and interested in having many units pathfinding in a large world simultaneously without having my laptop explode, I put together this little demo during the past week.
 </p>
 
-<div id="pathfinder">
+<span id="pathfinder" style="display:block;text-align:center">
 	<canvas id="canvas-pathfinder"></canvas>
-</div>
+</span>
 
 <p>
 You can click around the map to place a starting point and an end point. The program will then calculate a path between these points. The bright red line is the calculated path. The varying size on the squares constituting the path represents the current level of detail for the pathed point. Large squares means coarse pathing while small ones mean high detail. Also shown in in varying colours from yellow to green is explored points that did not yield the final path. The idea is then to recalculate the path once the unit has moved a certain distance along it, when more detail is needed. This will not yield optimal paths in general but the reduced complexity is worth it!
@@ -46,15 +44,16 @@ Left to add is some notion of impassable terrain. In the end I want buildings an
 Interesting idea, use lod while exploring. Distant, not-yet-explored, areas use a more coarse representaiton when redered than a well-explored area.
 </p>
 
-<p>ashlaban, July 7th 2013</p>
+<span class="post_footer">
+	<span class="sig"></span>
+	<span class="author">ashlaban</span>
+	<span class="time">23:23 8th July 2013</span>
+</span>
 
 <script type="text/javascript">
-	
-	// Document stuff
-	$(document).ready(function() {
-		initMapGen(16);
-		initPathfinder(16);
-	});
+
+	$("map-gen").onload = initMapGen(16);
+	$("pathfinder").onload = initPathfinder(16);
 
 	// Map generation demo stuff
 	document.getElementById('map-gen').onclick = function()
@@ -87,6 +86,4 @@ Interesting idea, use lod while exploring. Distant, not-yet-explored, areas use 
 
 </script>
 
-</body>
-
-</html>
+</span>
