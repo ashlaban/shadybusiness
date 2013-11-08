@@ -1,0 +1,25 @@
+It's raining threads!
+=====================
+
+I've been playing around with multi-threading and MEX-files recently.
+
+Optimising code
+
+master's thesis -> compute intensive algorithm.
+parallel computing
+	-> planning on using openCL
+	-> multi-threading will have to do for now
+
+naive multi-threading -> too many threads, too many context switches
+switch parallelisation point -> just plain too many threads
+
+implement thread pool
+	-> neat stuff
+	-> expensive to create thread contexts
+	-> create them once and let them scan thruogh a list of jobs
+	-> problem greatly simplified 'cause all jobs can be generated before hand
+	-> great on large problems
+
+>
+> pthread_create( &threads[iThread], NULL, workerThread, NULL);
+>
