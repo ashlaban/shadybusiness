@@ -1,6 +1,6 @@
 <div class="post_content">
 
-  <h1 id="week-16-summary">Week 16 Summary</h1>
+  <h1 id="week-17-summary">Week 17 Summary</h1>
 
   <h2 id="mplib">mpLib</h2>
 
@@ -9,88 +9,94 @@
   <h3 id="todo-for-mplib">TODO for mpLib:</h3>
   <ul>
     <li>Document mp, Match, Reconstruct, Utility</li>
-    <li>Const correctness</li>
     <li>Analyse profiling
       <ul>
-        <li>
-          <mark>Collect more data points from benchmark</mark>
-        </li>
         <li>Verify multidimensional theory</li>
       </ul>
     </li>
-    <li>Look into static analysers? Xcode?</li>
-    <li>Kernel adaption and reconstruction of impulse polluted and noisy sine?</li>
-    <li>Communication between mpLib and world using stdin/stdout?</li>
+    <li>
+      <mark>Look into static analysers? Xcode?</mark>
+    </li>
+    <li>
+      <mark>Kernel adaption and reconstruction of impulse polluted and noisy sine?</mark>
+    </li>
+    <li>Set up matlab matlab simulation server</li>
+    <li>
+      <mark>Communication between mpLib and world using stdin/stdout?</mark>
+    </li>
     <li>AXI4 memory mapping for shared memory between FPGA / CPU.</li>
   </ul>
 
   <h3 id="todo-for-vhdl">TODO for VHDL:</h3>
   <ul>
-    <li>
-      <mark>General sized kernels</mark>
-    </li>
-    <li><del>Find profiling tools?</del></li>
     <li>Wrapper for the VHDL unit</li>
-    <li>
-      <mark>Use all parallell or serial for kernel data bus?</mark>
-    </li>
-    <li>
-      <mark>Clocked vs. unclocked components?</mark>
-    </li>
+    <li>Check bandwidth reduction for FPGA step</li>
     <li>Interface with c-code somehow: <a href="http://bit.ly/16w6aKC">FPGA Programming w/ VHDL and C</a></li>
+  </ul>
+
+  <h3 id="todo-other">TODO other:</h3>
+  <ul>
+    <li>Master Thesis document in Fronter</li>
+    <li>Create a workplace upstairs</li>
+    <li>Scholarships descriptions</li>
   </ul>
 
 </div>
 <div class="post_content">
 
-  <h1 id="worklog-18-april-2013">Worklog 18 April 2013</h1>
-
-  <h2 id="vhdl-1">VHDL</h2>
-  <ol>
-    <li>Design of VHDL part of mpLib with documentation.
- Documentation covers parallell or serial communication, clocked vs. unclocked among other things.</li>
-  </ol>
-
-</div>
-<div class="post_content">
-
-  <h1 id="worklog-17-april-2013">Worklog 17 April 2013</h1>
+  <h1 id="worklog-25-april-2013">Worklog 25 April 2013</h1>
 
   <h2 id="mplib-1">mpLib</h2>
   <ol>
-    <li>Benchmarking extended and automised in MATLAB</li>
-    <li>Documented benchmarking runs.</li>
-    <li>Quick look into impulse feature extraction from noisy sine.</li>
+    <li>Ran impulse test on fixed point <code>mpLib</code>.
+ Result: looking pretty good.</li>
   </ol>
 
-  <h2 id="vhdl-2">VHDL</h2>
-  <ol>
-    <li>Comparator and Kernel linked together.</li>
-    <li>Verified Kernel and Comaprator in gtkWave.</li>
-  </ol>
+  <h2 id="fixed-point-impulse-test-results">Fixed-point impulse test results</h2>
+  <p>The result form the impulse test run shows that the algorithm can reconstruct the signal and also reduce noise. In the example a three second, sampling frequency 1000 Hz, long sine signal was polluted by irregular impulses of the mexican hat shape and low amplitude noise. The sine wave was also enveloped in a morlet waveform to produce regular variations. This was run through the fixed-point C implementation of the matching pursuit algorithm using six kernels and a kernel length of 128 samples.</p>
+
+  <p><img src="./img/week17_processedSignal.png" alt="A slice of the input signal reconstructed" /></p>
+
+  <p><img src="./img/week17_kernels.png" alt="The resulting kernels" /></p>
+
+  <p>The six kernels manage to capture the core of input signal. There is defintely a harmonic look to kernel four and five while kernel one through three contains pronounced spikes and little else. It also appears that in this test run kernel six was left unused. Since the input signal contains three types of waves interposed only three kernels should be needed, however, the over completeness of the kernel basis is what allows for a more sparse encoding.</p>
 
 </div>
 <div class="post_content">
 
-  <h1 id="worklog-16-april-2013">Worklog 16 April 2013</h1>
-
-  <h2 id="vhdl-3">VHDL</h2>
-  <ol>
-    <li>Schematic of part extracted to VHDL</li>
-    <li>Copied Jötes implementation of the adder tree (using heap)</li>
-    <li>Unclocked Kernel implementation completed</li>
-    <li>Unclocked max comparator implementation completed</li>
-  </ol>
-
-</div>
-<div class="post_content">
-
-  <h1 id="worklog-15-april-2013">Worklog 15 April 2013</h1>
+  <h1 id="worklog-24-april-2013">Worklog 24 April 2013</h1>
 
   <h2 id="mplib-2">mpLib</h2>
   <ol>
-    <li>Ran profiling execs</li>
-    <li>Matlab plots</li>
+    <li>Refactored matlab code for floating point mp</li>
+    <li>Ran impulse test on floating point <code>mpLib</code>
+ Result: six kernels reconstructs the signal and suppresses noise!</li>
+  </ol>
+
+</div>
+<div class="post_content">
+
+  <h1 id="worklog-23-april-2013">Worklog 23 April 2013</h1>
+
+  <h2 id="mplib-3">mpLib</h2>
+  <ol>
+    <li>Refactored and redid the fixed point matlab implementation</li>
+    <li>Ran impulse test on fixed point matlab</li>
+    <li>Proposal for standard communication using files written.</li>
+    <li>Communication through files implemented.</li>
+    <li>Added a command line option <code>-n %i</code> for number of epochs to run</li>
+  </ol>
+
+</div>
+<div class="post_content">
+
+  <h1 id="worklog-22-april-2013">Worklog 22 April 2013</h1>
+
+  <h2 id="mplib-4">mpLib</h2>
+  <ol>
+    <li>Got impulse signal generator from Serigo</li>
+    <li>Looked into static analysis with Clang (scan-build). Result: Not worth it.</li>
+    <li>Proposal for standard communication using stdin/stdout written.</li>
   </ol>
 
 </div>

@@ -1,0 +1,20 @@
+#content dt
+{
+	font-weight: bold;
+}
+
+#nav
+{
+	font-size: 22pt;
+}
+
+#wrapper
+{
+	margin: auto;
+	width: 50%;
+}
+
+.hidden
+{
+	display: none;
+}
