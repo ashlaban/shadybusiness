@@ -9,8 +9,8 @@
 
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
 
-	<link rel="stylesheet" type="text/css" href="css/sb.css"     >
-	<link rel="stylesheet" type="text/css" href="http://www.shadybusiness.se/css/navbar.css" >
+	<link rel="stylesheet" type="text/css" href="css/sb.css">
+	<link rel="stylesheet" type="text/css" href="css/navbar.css">
 
 	<?php require "include/variables.php" ?>
 
